@@ -1,0 +1,42 @@
+<div>
+  {{ blink() }}
+  <div class="simple__toolbar">
+    <mat-form-field class="example-form-field">
+      <mat-label>Clearable input</mat-label>
+      <input matInput type="text" [(ngModel)]="value" />
+      <button
+        mat-button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="value = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button>Add To list</button>
+  </div>
+  <div class="simple__container">
+    <div>
+      <mat-list>
+        <mat-list-item
+          (click)="selectItem(item)"
+          *ngFor="let item of myTodoList"
+        >
+          <h3>{{ item.title }}</h3>
+          <mat-chip-list>
+            {{calculate(item.num)}}
+          </mat-chip-list>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div>
+      <ng-container *ngIf="selected">
+        <div>{{ selected.title }}</div>
+        <div>{{ selected.description }}</div>
+        <div>{{ selected.picture }}</div>
+      </ng-container>
+    </div>
+  </div>
+</div>

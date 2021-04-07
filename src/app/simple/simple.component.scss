@@ -1,0 +1,15 @@
+.simple__toolbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.simple__container {
+  display: flex;
+    justify-content: space-between;
+}
+
+:host(.highlight) {
+  width: 100%;
+    border: 2px solid orangered;
+  }
