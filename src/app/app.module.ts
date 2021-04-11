@@ -12,9 +12,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CalculatingPipe } from './simple/calculating.pipe';
+import { MinesweeperModule } from './minesweeper/minesweeper.module';
 
 @NgModule({
-  declarations: [AppComponent, SimpleComponent, AngularHelpComponent],
+  declarations: [AppComponent, SimpleComponent, AngularHelpComponent, CalculatingPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +27,7 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatListModule,
     MatChipsModule,
+    MinesweeperModule
   ],
   providers: [],
   bootstrap: [AppComponent],

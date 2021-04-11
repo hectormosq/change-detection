@@ -1,0 +1,5 @@
+<div class="board">
+  <ng-container *ngFor="let tile of getTiles()">
+    <app-tile [tile]="tile" (tileClick)="handleTileClick($event)"></app-tile>
+  </ng-container>
+</div>

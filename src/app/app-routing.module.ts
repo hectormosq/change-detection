@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularHelpComponent } from './angular-help/angular-help.component';
+import { MinesweeperComponent } from './minesweeper/minesweeper.component';
 import { SimpleComponent } from './simple/simple.component';
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'simple',
     component: SimpleComponent
+  },
+  {
+    path: 'minesweeper',
+    component: MinesweeperComponent
   },
 ];
 
