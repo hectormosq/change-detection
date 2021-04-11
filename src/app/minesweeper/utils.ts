@@ -2,7 +2,6 @@
 // https://github.com/cjohansen/react-sweeper
 
 import { List, Map, fromJS, get } from 'immutable';
-import * as Immutable from 'immutable';
 
 function partition(size, coll) {
   var res = [];
@@ -32,7 +31,7 @@ function repeat(n, val) {
   while (n--) {
     res.push(val);
   }
-  return List(res);
+  return res;
 }
 
 function shuffle(list) {

@@ -22,7 +22,7 @@ export class BoardComponent implements OnChanges {
   }
 
   getTiles() {
-    const game = this.game ? this.game.get('tiles') : [];
+    const game = this.game ? this.game.tiles : [];
     console.log(game);
     return game
   }
@@ -38,7 +38,7 @@ export class BoardComponent implements OnChanges {
     if (isGameOver(this.game)) {
       return;
     }
-    const newGame = revealTile(this.game, tile.get('id'));
+    const newGame = revealTile(this.game, tile.id);
     if (newGame !== this.game) {
       this.game = newGame;
       this.updateGame();
